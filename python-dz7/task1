@@ -1,0 +1,16 @@
+import requests
+
+url = "https://jsonplaceholder.typicode.com/posts"
+
+response = requests.get(url)
+
+if response.status_code == 200:
+    posts = response.json()
+    
+    for i, post in enumerate(posts[:5], 1):
+        print(f"--- Пост {i} ---")
+        print(f"Заголовок: {post['title']}")
+        print(f"Текст: {post['body']}")
+        print()
+else:
+    print(f"Ошибка запроса: {response.status_code}")
