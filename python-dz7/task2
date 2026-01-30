@@ -1,6 +1,6 @@
 import requests
 
-API_KEY = #секрет
+API_KEY = 'вставьте свой api-ключ' #секрет
 
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 
